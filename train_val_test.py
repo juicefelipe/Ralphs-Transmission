@@ -3,7 +3,7 @@ df_drop_dummy = pd.get_dummies(df_drop, drop_first = True)
 
 #Split the data into training/validation/testing sets
 from sklearn.model_selection import train_test_split
-X = df_drop_dummy.drop('Buy', axis = 1)
+X = df_drop_dummy.drop(['Buy', 'Total Earned'], axis = 1)
 y = df_drop_dummy['Buy']
 X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size = 0.2, shuffle = True)
 X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size = 0.25)
