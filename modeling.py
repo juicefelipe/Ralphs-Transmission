@@ -36,6 +36,6 @@ final_preds = rf_clf_final.predict(X_test_scaled)
 print(confusion_matrix(y_test, final_preds))
 print(classification_report(y_test, final_preds))
 
-#Given the nearly perfect accuracy on this data set we will not tune the random forest model further. However, the second project
-#objective is to know the customers most likely to buy. Thus we will aslo use the predict_proba method to output purchase likelihood.
+#We will not tune the random forest model further. However, the second project objective is to know the customers 
+#most likely to buy. Thus we will aslo use the predict_proba method to output purchase likelihood.
 final_proba = rf_clf_final.predict_proba(X_test_scaled)
